@@ -4,11 +4,11 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const Item = require('./models/Item');
+const Item = require('./Item');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/testdb';
+const PORT = process.env.PORT;
+const MONGO_URI = process.env.MONGO_URI;
 
 app.use(bodyParser.json());
 
